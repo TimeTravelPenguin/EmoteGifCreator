@@ -51,6 +51,12 @@ namespace GifAnimator
       Console.WriteLine("Rendering gif...");
 
       var path = Path.Combine(gifData.OutputLocation, gifData.FileName);
+
+      if (!path.EndsWith(".gif", StringComparison.InvariantCultureIgnoreCase))
+      {
+        path += ".gif";
+      }
+
       imgCollection.Write(path, MagickFormat.Gif);
     }
   }

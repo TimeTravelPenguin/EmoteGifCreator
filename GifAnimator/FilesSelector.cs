@@ -26,7 +26,6 @@ namespace GifAnimator
     {
       while (true)
       {
-        Console.Clear();
         Console.WriteLine("When selecting the source folder containing the individual frames for the animation," +
                           Environment.NewLine +
                           "ensure the only contents are the frames required for the animation!");

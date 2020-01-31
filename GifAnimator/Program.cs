@@ -25,6 +25,9 @@ namespace GifAnimator
     {
       Console.Title = "Quick Gif Maker";
 
+      Console.WriteLine("If there are any issues, please visit: " + @"https://github.com/TimeTravelPenguin/EmoteGifCreator");
+      Console.WriteLine();
+
       var imageFrames = FilesSelector.SetDirectory().ToArray();
       Console.WriteLine();
 

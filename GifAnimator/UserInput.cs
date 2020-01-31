@@ -139,7 +139,7 @@ namespace GifAnimator
       } while (quality < 1 || quality > 100);
 
 
-      return new GifData(animationDuration, animationTicksPerSecond, filename, imageFrames, GifDisposeMethod.Previous,
+      return new GifData(animationDuration, animationTicksPerSecond, filename, imageFrames, GifDisposeMethod.Background,
         MagickColor.FromRgba(0, 0, 0, 0), outputDir, quality);
     }
 

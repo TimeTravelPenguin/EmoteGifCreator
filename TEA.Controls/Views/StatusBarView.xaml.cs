@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 namespace TEA.Controls.Views
 {
   /// <summary>
-  /// Interaction logic for StatusBar.xaml
+  /// Interaction logic for StatusBarView.xaml
   /// </summary>
   public partial class StatusBar : UserControl
   {

@@ -11,6 +11,8 @@ namespace TEA.Controls.ViewModels
   {
     private ObservableCollection<string> _files = new ObservableCollection<string>();
 
+    public StatusBarViewModel StatusBar { get; set; } = new StatusBarViewModel();
+
     public ObservableCollection<string> Files
     {
       get => _files;
@@ -38,6 +40,9 @@ namespace TEA.Controls.ViewModels
         default:
           throw new InvalidOperationException();
       }
+
+      // TODO:  Create a strategy pattern for "Files" to indicate if a working directory, or a working file(s). Then use that strategy to update the status!
+      StatusBar.UpdateStatus(Files);
     }
   }
 }

@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TwitchEmoteAdaptor.Views
+namespace TEA.Controls.Views
 {
   /// <summary>
-  /// Interaction logic for MainWindowView.xaml
+  /// Interaction logic for StatusBar.xaml
   /// </summary>
-  public partial class MainWindowView : Window
+  public partial class StatusBar : UserControl
   {
-    public MainWindowView()
+    public StatusBar()
     {
       InitializeComponent();
     }

@@ -1,22 +1,17 @@
 ﻿<Window
-  x:Class="TwitchEmoteAdaptor.Views.MainWindowView"
+  x:Class="TEA.Wpf.Views.MainWindowView"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+  xmlns:behaviors="clr-namespace:TEA.Wpf.Behaviors"
+  xmlns:controlViews="clr-namespace:TEA.Controls.Views;assembly=TEA.Controls"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-  xmlns:local="clr-namespace:TwitchEmoteAdaptor.Views"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:viewModels="clr-namespace:TwitchEmoteAdaptor.ViewModels"
+  xmlns:views="clr-namespace:TEA.Wpf.Views"
   Title="Tea"
   Width="800"
   Height="450"
   mc:Ignorable="d">
-
-  <Window.Resources>
-    <Style x:Key="TabBorderTemplate" TargetType="{x:Type Border}">
-      <Setter Property="BorderBrush" Value="#ACACAC" />
-      <Setter Property="BorderThickness" Value="1" />
-    </Style>
-  </Window.Resources>
 
   <Grid>
     <Grid.ColumnDefinitions>
@@ -37,19 +32,19 @@
       TabStripPlacement="Left">
 
       <TabItem Header="Quick Resize">
-        <Border Style="{StaticResource TabBorderTemplate}">
-          <local:QuickResizeView />
-        </Border>
+        <controlViews:QuickResizeView />
       </TabItem>
 
       <TabItem Header="GIF Animation">
-        <Border Style="{StaticResource TabBorderTemplate}">
-          <TextBlock Margin="10,10,0,0" Text="Animation to come, soon!" />
-        </Border>
+        <controlViews:GifAnimatorView Background="Transparent">
+          <b:Interaction.Behaviors>
+            <behaviors:DropBehavior OnDropped="{Binding OnDroppedCommand}" />
+          </b:Interaction.Behaviors>
+        </controlViews:GifAnimatorView>
       </TabItem>
 
       <TabItem Header="About">
-        <Border Style="{StaticResource TabBorderTemplate}">
+        <Border Style="{StaticResource ControlGrayBorderStyle}">
           <DockPanel>
             <TextBlock Margin="10,10,0,0" Text="About to come, soon!" />
             <Image

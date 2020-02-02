@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:TEA.Controls.Resources">
+
+  <Style x:Key="ControlGrayBorderStyle" TargetType="{x:Type Border}">
+    <Setter Property="BorderBrush" Value="{DynamicResource ControlGrayBorder}" />
+    <Setter Property="BorderThickness" Value="1" />
+  </Style>
+
+</ResourceDictionary>

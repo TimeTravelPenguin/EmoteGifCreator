@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TEA.Core\TEA.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\QuickResizeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Resources\BoarderStyleResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ColourResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\QuickResizeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

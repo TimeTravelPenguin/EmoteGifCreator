@@ -11,14 +11,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TwitchEmoteAdaptor.Views
+namespace TEA.Controls.Views
 {
   /// <summary>
-  /// Interaction logic for QuickResizeView.xaml
+  /// Interaction logic for NoFilesAddedMessage.xaml
   /// </summary>
-  public partial class QuickResizeView : UserControl
+  public partial class NoFilesAddedMessage : UserControl
   {
-    public QuickResizeView()
+    public NoFilesAddedMessage()
     {
       InitializeComponent();
     }
